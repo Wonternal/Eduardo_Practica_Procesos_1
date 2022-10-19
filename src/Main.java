@@ -37,5 +37,21 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        // Comprobamos si hay algún proceso activo dentro de la lista
+        int numInactives = 0;
+        while (numInactives != listaProcesos.size()) {
+            numInactives = 0;
+
+            for (int i = 0; i < listaProcesos.size(); i++) {
+                if (!listaProcesos.get(i).isAlive()) {
+                    numInactives++;
+                }
+            }
+        }
+
+
+        // Cuando no hay ningún proceso activo muestra un mensaje final
+        System.out.println("Se han cerrado todas las ventanas");
     }
 }
