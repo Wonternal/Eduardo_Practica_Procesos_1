@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -27,5 +28,14 @@ public class Main {
         // Configuramos un pb con el comando notepad
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.command("notepad");
+
+        // Ejecutamos tantos procesos como nos pida el usuario
+        try {
+            for (int i = 0; i < numVentanas; i++) {
+                listaProcesos.add(processBuilder.start());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
