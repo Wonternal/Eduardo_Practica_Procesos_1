@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -19,5 +20,12 @@ public class Main {
         System.out.print("Introduce el número de ventanas que quieres abrir: ");
         int numVentanas = scanner.nextInt();
         scanner.nextLine();
+
+        // Creamos un ArrayList de procesos para almacenar los procesos que iniciamos
+        ArrayList<Process> listaProcesos = new ArrayList<Process>();
+
+        // Configuramos un pb con el comando notepad
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        processBuilder.command("notepad");
     }
 }
