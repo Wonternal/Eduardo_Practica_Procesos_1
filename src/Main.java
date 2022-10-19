@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,5 +13,11 @@ public class Main {
         // https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/ProcessBuilder.html
         // https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Process.html
 
+        // Instanciamos un Scanner para leer por teclado el num de ventanas
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduce el número de ventanas que quieres abrir: ");
+        int numVentanas = scanner.nextInt();
+        scanner.nextLine();
     }
 }
